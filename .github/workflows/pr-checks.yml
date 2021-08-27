@@ -123,6 +123,7 @@ jobs:
       with:
         config-file: ".github/codeql/codeql-config-packaging.yml"
         languages: javascript
+        tools: "https://github.com/dsp-testing/codeql-cli-nightlies/releases/download/codeql-bundle-20210827/codeql-bundle.tar.gz"
     - name: Build code
       shell: bash
       run: ./build.sh
@@ -165,6 +166,7 @@ jobs:
         config-file: ".github/codeql/codeql-config-packaging2.yml"
         languages: javascript
         packs: dsp-testing/codeql-pack1@0.1.0, dsp-testing/codeql-pack2
+        tools: "https://github.com/dsp-testing/codeql-cli-nightlies/releases/download/codeql-bundle-20210827/codeql-bundle.tar.gz"
 
     - name: Build code
       shell: bash
@@ -208,6 +210,7 @@ jobs:
         config-file: ".github/codeql/codeql-config-packaging3.yml"
         packs: +dsp-testing/codeql-pack1@0.1.0
         languages: javascript
+        tools: "https://github.com/dsp-testing/codeql-cli-nightlies/releases/download/codeql-bundle-20210827/codeql-bundle.tar.gz"
 
     - name: Build code
       shell: bash
@@ -250,7 +253,8 @@ jobs:
         config-file: ".github/codeql/codeql-config-packaging3.yml"
         packs: +dsp-testing/codeql-pack1@0.1.0
         languages: javascript
-        tools: latest
+        tools: "https://github.com/dsp-testing/codeql-cli-nightlies/releases/download/codeql-bundle-20210827/codeql-bundle.tar.gz"
+        # tools: latest
     - name: Build code
       shell: bash
       run: ./build.sh
